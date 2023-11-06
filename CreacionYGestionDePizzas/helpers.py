@@ -3,7 +3,7 @@ import os
 
 def verificarPizza(pizza):
     # Construir la ruta al archivo csv
-    RUTA = os.path.join(".", "CreacionYGestionDePizzas", "carta.csv")
+    RUTA = os.path.join(".", "CreacionYGestionDePizzas","data", "carta.csv")
     with open(RUTA, newline='') as File:  
         reader = csv.reader(File,delimiter=';')
         for row in reader:
