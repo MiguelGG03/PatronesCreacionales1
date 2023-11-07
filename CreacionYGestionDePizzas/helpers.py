@@ -29,7 +29,7 @@ def verificarMasa(lista,masa):
             return True
     return False
 
-def verificarTamaño(lista,tamaño):
+def verificarTamano(lista,tamaño):
     for algo in lista:
         if algo == tamaño:
             return True

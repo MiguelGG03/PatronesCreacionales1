@@ -9,4 +9,4 @@ SALSAS = ["tomate","barbacoa","carbonara","pesto","pomodoro"]
 
 MASAS = ["fina","normal","gorda"]
 
-TAMAÑOS = ["pequeña","mediana","familiar"]
+TAMANOS = ["pequeña","mediana","familiar"]
