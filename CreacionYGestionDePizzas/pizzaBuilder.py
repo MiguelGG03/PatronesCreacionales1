@@ -1,8 +1,9 @@
+from abc import ABC, abstractmethod
 import sys
 sys.path.append('../')
 from pizza import Pizza
 
-class PizzaBuilder:
+class PizzaBuilder(ABC):
     def __init__(self):
         self.pizza = Pizza()
 
@@ -18,6 +19,10 @@ class PizzaBuilder:
     def setIngrediente(self, ingredientes:list[str]):
         self.pizza.ingredientes = ingredientes
 
+    @abstractmethod
+    def build(self):
+        pass
+    
     def getPizza(self):
         return self.pizza
 

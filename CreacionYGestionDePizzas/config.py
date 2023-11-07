@@ -1,9 +1,10 @@
 CARTA_PATH = "data/carta.csv"
 
-INGREDIENTES = ["tomate","queso","queso azul","champiñones",
+INGREDIENTES = ["tomate","queso","queso de cabra","champiñones",
                 "bacon","pollo","pimiento",
                 "cebolla","piña","jamón",
-                "aceitunas","atún"]
+                "aceitunas","atún","mozzarella",
+                "gorgonzola","parmesano"]
 
 SALSAS = ["tomate","barbacoa","carbonara","pesto","pomodoro"]
 

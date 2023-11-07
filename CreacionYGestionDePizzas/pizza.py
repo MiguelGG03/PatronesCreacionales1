@@ -16,7 +16,7 @@ class Pizza:
     
     @tamano.setter
     def tamano(self, tamano):
-        if verificarTamano(TAMANOS,tamano):
+        if verificarTamano(TAMANOS,tamano.lower()):
             self._tamano = tamano
         else:
             raise ValueError("El tamaño no es correcto")
@@ -27,7 +27,7 @@ class Pizza:
     
     @masa.setter
     def masa(self, masa):
-        if verificarMasa(MASAS,masa):
+        if verificarMasa(MASAS,masa.lower()):
             self._masa = masa
         else:
             raise ValueError("La masa no es correcta")
@@ -38,7 +38,7 @@ class Pizza:
     
     @salsa.setter
     def salsa(self, salsa):
-        if verificarSalsa(SALSAS,salsa):
+        if verificarSalsa(SALSAS,salsa.lower()):
             self._salsa = salsa
         else:
             raise ValueError("La salsa no es correcta")
@@ -50,7 +50,7 @@ class Pizza:
     @ingredientes.setter
     def ingredientes(self, ingredientes):
         for ingrediente in ingredientes:
-            if not verificarIngrediente(INGREDIENTES,ingrediente):
+            if not verificarIngrediente(INGREDIENTES,ingrediente.lower()):
                 raise ValueError(f"El ingrediente {ingrediente} no es correcto")
         self._ingredientes = ingredientes
     def __str__(self):
