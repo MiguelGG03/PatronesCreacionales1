@@ -78,7 +78,7 @@ class PersonalizadaPizzaBuilder(PizzaBuilder):
             return True
         else:
             raise ValueError("No puedes añadir mas de 3 ingredientes")
-        
+
     def build(self):
         self.setTamano("")
         self.setSalsa("")
