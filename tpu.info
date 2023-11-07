@@ -1,0 +1,34 @@
+Un TPU o Unidad de Procesamiento de Tensor
+(Tensor Processing Unit) es un circuito 
+integrado de aplicación específica (ASIC)
+desarrollado por Google para acelerar el
+aprendizaje automático. Está diseñado
+específicamente para ejecutar modelos de 
+inteligencia artificial y trabajar con tensores,
+que son estructuras de datos multidimensionales,
+permitiendo realizar cálculos matriciales
+de forma muy eficiente, lo cual es una tarea 
+común en el aprendizaje profundo.
+
+Las TPUs están optimizadas para llevar a cabo
+las operaciones de baja precisión que son 
+típicas en muchas aplicaciones de aprendizaje
+automático, lo que les permite procesar más 
+datos más rápido y con un consumo energético 
+más bajo en comparación con otras soluciones 
+como las CPUs (Unidades de Procesamiento Central)
+o las GPUs (Unidades de Procesamiento Gráfico). 
+Esta eficiencia hace que las TPUs sean 
+particularmente útiles para escalar 
+aplicaciones de inteligencia artificial, 
+como entrenar modelos de redes neuronales 
+grandes o ejecutar inferencias en servidores 
+de producción.
+
+Google utiliza TPUs en sus propios productos 
+y servicios para tareas como la búsqueda, la 
+traducción automática, las fotos de Google y su 
+asistente inteligente. Además, las TPUs están 
+disponibles para terceros a través de servicios 
+en la nube de Google, como Google Compute Engine 
+y Google Cloud Machine Learning Engine.

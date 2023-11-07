@@ -20,3 +20,13 @@ class PizzaBuilder:
 
     def getPizza(self):
         return self.pizza
+
+class CuatroQuesosPizzaBuilder(PizzaBuilder):
+    def __init__(self):
+        super().__init__()
+
+    def build(self):
+        self.setTamano("Mediana")
+        self.setMasa("Crujiente")
+        self.setSalsa("Tomate")
+        self.setIngrediente(["Mozzarella", "Gorgonzola", "Parmesano", "Queso de cabra"])
