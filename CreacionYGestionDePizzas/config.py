@@ -6,7 +6,8 @@ INGREDIENTES = ["tomate","queso","queso de cabra","champiñones",
                 "aceitunas","atún","mozzarella",
                 "gorgonzola","parmesano"]
 
-SALSAS = ["tomate","barbacoa","carbonara","pesto","pomodoro"]
+SALSAS = ["tomate","barbacoa","carbonara",
+          "pesto","pomodoro"]
 
 MASAS = ["fina","normal","gorda"]
 
