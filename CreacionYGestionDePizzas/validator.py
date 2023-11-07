@@ -27,7 +27,7 @@ class ValidarIngredientes(Validador):
     """
     def validar(self,ingredientes):
         for _ingrediente in ingredientes:
-            if not (_ingrediente in INGREDIENTES):
+            if not (_ingrediente.lower() in INGREDIENTES):
                 return False
         return True
 
