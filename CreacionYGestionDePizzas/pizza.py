@@ -53,5 +53,6 @@ class Pizza:
             if not verificarIngrediente(INGREDIENTES,ingrediente.lower()):
                 raise ValueError(f"El ingrediente {ingrediente} no es correcto")
         self._ingredientes = ingredientes
+    
     def __str__(self):
         return f"masa: {self.masa}\nsalsa: {self.salsa}\ningredientes: {self.ingredientes}"
