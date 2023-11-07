@@ -31,7 +31,7 @@ class ValidarIngredientes(Validador):
                 return True
         return False
 
-class ValidarSalsa(Validador):
+class ValidarSalsas(Validador):
     """
     Valida que la salsa sea valida
     """
