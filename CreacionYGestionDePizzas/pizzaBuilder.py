@@ -22,7 +22,7 @@ class PizzaBuilder(ABC):
     @abstractmethod
     def build(self):
         pass
-    
+
     def getPizza(self):
         return self.pizza
 
@@ -35,3 +35,10 @@ class CuatroQuesosPizzaBuilder(PizzaBuilder):
         self.setMasa("Crujiente")
         self.setSalsa("Tomate")
         self.setIngrediente(["Mozzarella", "Gorgonzola", "Parmesano", "Queso de cabra"])
+
+class MargaritaPizzaBuilder(PizzaBuilder):
+    def __init__(self):
+        super().__init__()
+
+    def build(self):
+        self.setTamano("Pequena")
