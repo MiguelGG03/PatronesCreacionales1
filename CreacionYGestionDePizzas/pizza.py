@@ -28,6 +28,14 @@ class Pizza:
     @topping.setter
     def topping(self, topping):
         self._topping = topping
-        
+
+    @property
+    def pairing(self):
+        return self._pairing
+    
+    @pairing.setter
+    def pairing(self, pairing):
+        self._pairing = pairing
+
     def __str__(self):
         return f"dough: {self.dough}\nsauce: {self.sauce}\ntopping: {self.topping}"
