@@ -2,22 +2,35 @@ from abc import ABC, abstractmethod
 import sys
 sys.path.append('../')
 from pizza import Pizza
+from validator import *
 
 class PizzaBuilder(ABC):
     def __init__(self):
         self.pizza = Pizza()
 
     def setTamano(self, tamano):
-        self.pizza.tamano = tamano
+        if (ValidarTamano().validar(tamano)):
+            self.pizza.tamano = tamano
+        else:
+            raise ValueError(f'El tamaño "{tamano}" no es valido')
 
     def setMasa(self, masa):
-        self.pizza.masa = masa
+        if (ValidarMasas().validar(masa)):
+            self.pizza.masa = masa
+        else:
+            raise ValueError(f'La masa "{masa}" no es valida')
 
-    def setSalsa(self, sauce):
-        self.pizza.salsa = sauce
+    def setSalsa(self, salsa):
+        if (ValidarSalsas().validar(salsa)):
+            self.pizza.salsa = salsa
+        else:
+            raise ValueError(f'La salsa "{salsa}" no es valida')
 
     def setIngrediente(self, ingredientes:list[str]):
-        self.pizza.ingredientes = ingredientes
+        if (ValidarIngredientes().validar(ingredientes)):
+            self.pizza.ingredientes = ingredientes
+        else:
+            raise ValueError(f'Alguno de los ingredientes en {ingredientes} no es/son valido/s')
 
     @abstractmethod
     def build(self):
