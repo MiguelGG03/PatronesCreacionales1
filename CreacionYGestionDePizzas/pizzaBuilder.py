@@ -1,3 +1,7 @@
+import sys
+sys.path.append('../')
+from pizza import Pizza
+
 class PizzaBuilder:
     def __init__(self):
         self.pizza = Pizza()
