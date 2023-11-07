@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 import csv
-from config import CARTA_PATH, INGREDIENTES , SALSAS
+from config import CARTA_PATH, INGREDIENTES , SALSAS , MASAS , TAMANOS
 
 class Validador(ABC):
 
@@ -9,6 +9,9 @@ class Validador(ABC):
         pass
 
 class ValidarPizza(Validador):
+    """
+    Valida que la pizza seleccionada exista dentro de la carta
+    """
 
     def validar(self,pizza):
         with open(CARTA_PATH, newline='') as File:  
@@ -35,5 +38,25 @@ class ValidarSalsa(Validador):
     def validar(self,salsa):
         for _salsa in SALSAS:
             if _salsa == salsa:
+                return True
+        return False
+
+class ValidarMasas(Validador):
+    """
+    Valida que la salsa sea valida 
+    """
+    def validar(self,masa):
+        for _masa in MASAS:
+            if _masa == masa:
+                return True
+        return False
+
+class ValidarTamano(Validador):
+    """
+    Valida que el tamaño sea valido
+    """
+    def validar(self,tamaño):
+        for _tamaño in TAMANOS:
+            if _tamaño == tamaño:
                 return True
         return False
