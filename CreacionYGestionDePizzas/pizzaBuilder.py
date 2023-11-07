@@ -55,3 +55,20 @@ class BarbacoaPizzaBuilder(PizzaBuilder):
         self.setMasa("Gorda")
         self.setSalsa("Barbacoa")
         self.setIngrediente(["Mozzarella", "Carne", "Bacon"])
+
+class PersonalizadaPizzaBuilder(PizzaBuilder):
+    def __init__(self):
+        super().__init__()
+    
+    def checkMaxIngredientes(self,lista):
+        if(len(lista)<=3):
+            return True
+        else:
+            raise ValueError("No puedes añadir mas de 3 ingredientes")
+        
+
+    def build(self):
+        self.setTamano("")
+        self.setSalsa("")
+        self.setSalsa("")
+        self.setIngrediente([])
