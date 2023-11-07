@@ -5,10 +5,19 @@ from config import TAMANOS , MASAS , SALSAS , INGREDIENTES
 
 class Pizza:
     def __init__(self):
+        self._nombre = ""
         self._tamano = ""
         self._masa = ""
         self._salsa = ""
         self._ingredientes = ""
+
+    @property
+    def nombre(self):
+        return self._nombre
+    
+    @nombre.setter
+    def nombre(self):
+        return self._nombre
 
     @property
     def tamano(self):
