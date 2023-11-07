@@ -6,14 +6,17 @@ class PizzaBuilder:
     def __init__(self):
         self.pizza = Pizza()
 
-    def setDough(self, dough):
-        self.pizza.dough = dough
+    def setTamano(self, tamano):
+        self.pizza.tamano = tamano
 
-    def setSauce(self, sauce):
-        self.pizza.sauce = sauce
+    def setMasa(self, masa):
+        self.pizza.masa = masa
 
-    def setTopping(self, topping):
-        self.pizza.topping = topping
+    def setSalsa(self, sauce):
+        self.pizza.salsa = sauce
+
+    def setIngrediente(self, ingredientes:list[str]):
+        self.pizza.ingredientes = ingredientes
 
     def getPizza(self):
         return self.pizza
