@@ -17,6 +17,25 @@ def verificarIngrediente(lista,ingrediente):
             return True
     return False
 
+def verificarSalsa(lista,salsa):
+    for algo in lista:
+        if algo == salsa:
+            return True
+    return False
+
+def verificarMasa(lista,masa):
+    for algo in lista:
+        if algo == masa:
+            return True
+    return False
+
+def verificarTamaño(lista,tamaño):
+    for algo in lista:
+        if algo == tamaño:
+            return True
+    return False
+
+
 if __name__ == "__main__":
     print(verificarPizza("Margarita"))
     print(verificarIngrediente(["queso","tomate"],"queso"))
