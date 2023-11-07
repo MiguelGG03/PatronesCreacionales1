@@ -1,8 +1,3 @@
-import sys
-sys.path.append('../')
-from helpers import verificarMasa, verificarSalsa, verificarIngrediente, verificarTamano, verificarPizza
-from config import TAMANOS , MASAS , SALSAS , INGREDIENTES
-
 class Pizza:
     def __init__(self):
         self._nombre = ""
@@ -16,8 +11,8 @@ class Pizza:
         return self._nombre
     
     @nombre.setter
-    def nombre(self):
-        return self._nombre
+    def nombre(self, nombre):
+        self._nombre = nombre
 
     @property
     def tamano(self):
@@ -25,10 +20,7 @@ class Pizza:
     
     @tamano.setter
     def tamano(self, tamano):
-        if verificarTamano(TAMANOS,tamano.lower()):
-            self._tamano = tamano
-        else:
-            raise ValueError("El tamaño no es correcto")
+        self._tamano = tamano
 
     @property
     def masa(self):
@@ -36,32 +28,23 @@ class Pizza:
     
     @masa.setter
     def masa(self, masa):
-        if verificarMasa(MASAS,masa.lower()):
-            self._masa = masa
-        else:
-            raise ValueError("La masa no es correcta")
-
+        self._masa = masa
+        
     @property
     def salsa(self):
         return self._salsa
     
     @salsa.setter
     def salsa(self, salsa):
-        if verificarSalsa(SALSAS,salsa.lower()):
-            self._salsa = salsa
-        else:
-            raise ValueError("La salsa no es correcta")
-
+        self._salsa = salsa
+        
     @property
     def ingredientes(self):
         return self._ingredientes
     
     @ingredientes.setter
     def ingredientes(self, ingredientes):
-        for ingrediente in ingredientes:
-            if not verificarIngrediente(INGREDIENTES,ingrediente.lower()):
-                raise ValueError(f"El ingrediente {ingrediente} no es correcto")
         self._ingredientes = ingredientes
     
     def __str__(self):
-        return f"masa: {self.masa}\nsalsa: {self.salsa}\ningredientes: {self.ingredientes}"
+        return f"nombre: {self.nombre} \nmasa: {self.masa}\nsalsa: {self.salsa}\ningredientes: {self.ingredientes}"

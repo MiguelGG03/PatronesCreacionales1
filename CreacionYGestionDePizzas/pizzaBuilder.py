@@ -9,19 +9,19 @@ class PizzaBuilder(ABC):
         self.pizza = Pizza()
 
     def setTamano(self, tamano):
-        if (ValidarTamano().validar(tamano)):
+        if (ValidarTamano().validar(tamano.lower())):
             self.pizza.tamano = tamano
         else:
             raise ValueError(f'El tamaño "{tamano}" no es valido')
 
     def setMasa(self, masa):
-        if (ValidarMasas().validar(masa)):
+        if (ValidarMasas().validar(masa.lower())):
             self.pizza.masa = masa
         else:
             raise ValueError(f'La masa "{masa}" no es valida')
 
     def setSalsa(self, salsa):
-        if (ValidarSalsas().validar(salsa)):
+        if (ValidarSalsas().validar(salsa.lower())):
             self.pizza.salsa = salsa
         else:
             raise ValueError(f'La salsa "{salsa}" no es valida')
