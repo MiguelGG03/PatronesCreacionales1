@@ -1,41 +1,32 @@
 class Pizza:
     def __init__(self):
-        self._dough = ""
-        self._sauce = ""
-        self._topping = ""
-        self._pairing = ""
+        self._masa = ""
+        self._salsa = ""
+        self._ingredientes = ""
 
     @property
-    def dough(self):
-        return self._dough
+    def masa(self):
+        return self._masa
     
-    @dough.setter
-    def dough(self, dough):
-        self._dough = dough
+    @masa.setter
+    def masa(self, masa):
+        self._masa = masa
 
     @property
-    def sauce(self):
-        return self._sauce
+    def salsa(self):
+        return self._salsa
     
-    @sauce.setter
-    def sauce(self, sauce):
-        self._sauce = sauce
+    @salsa.setter
+    def salsa(self, salsa):
+        self._salsa = salsa
 
     @property
-    def topping(self):
-        return self._topping
+    def ingredientes(self):
+        return self._ingredientes
     
-    @topping.setter
-    def topping(self, topping):
-        self._topping = topping
-
-    @property
-    def pairing(self):
-        return self._pairing
-    
-    @pairing.setter
-    def pairing(self, pairing):
-        self._pairing = pairing
+    @ingredientes.setter
+    def ingredientes(self, ingredientes):
+        self._ingredientes = ingredientes
 
     def __str__(self):
-        return f"dough: {self.dough}\nsauce: {self.sauce}\ntopping: {self.topping}"
+        return f"masa: {self.masa}\nsalsa: {self.salsa}\ningredientes: {self.ingredientes}"
