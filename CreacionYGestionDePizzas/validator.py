@@ -25,11 +25,11 @@ class ValidarIngredientes(Validador):
     """
     Valida que los ingredientes sean validos
     """
-    def validar(self,ingrediente):
-        for _ingrediente in INGREDIENTES:
-            if _ingrediente == ingrediente:
-                return True
-        return False
+    def validar(self,ingredientes):
+        for _ingrediente in ingredientes:
+            if not (_ingrediente in INGREDIENTES):
+                return False
+        return True
 
 class ValidarSalsas(Validador):
     """
