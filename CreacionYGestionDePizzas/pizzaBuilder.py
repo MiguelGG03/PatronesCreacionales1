@@ -42,3 +42,16 @@ class MargaritaPizzaBuilder(PizzaBuilder):
 
     def build(self):
         self.setTamano("Pequena")
+        self.setMasa("Fina")
+        self.setSalsa("Tomate")
+        self.setIngrediente(["Mozzarella, Tomate, Albahaca"])
+
+class BarbacoaPizzaBuilder(PizzaBuilder):
+    def __init__(self):
+        super().__init__()
+
+    def build(self):
+        self.setTamano("Familiar")
+        self.setMasa("Gorda")
+        self.setSalsa("Barbacoa")
+        self.setIngrediente(["Mozzarella", "Carne", "Bacon"])
