@@ -110,30 +110,15 @@ class PersonalizadaPizzaBuilder(PizzaBuilder):
         if(len(lista)<=3):
             return True
         else:
-            print("No puedes añadir mas de tres ingredientes")
+            print("ya son 3 ingredientes")
             return False
 
-    def anadirIngredientes(self):
-        ingredientes= []
-        while(self.checkMaxIngredientes(ingredientes)):
-            seleccion = int(input(">>> "))
-            if (seleccion not in range(INGREDIENTES)):
-                print("Ingrediente no encontrado")
-            elif (seleccion == ""):
-                break
-            else:
-                seleccion -= 1
-                ingredientes.append(INGREDIENTES[seleccion])
-                print(f"{INGREDIENTES[seleccion]} agregado con exito")
-
-        return ingredientes
-
-    def build(self,nombre,tamano,masa,salsa):
+    def build(self,nombre,tamano,masa,salsa,ingredientes):
         self.setNombre(nombre)
         self.setTamano(tamano)
         self.setSalsa(masa)
         self.setSalsa(salsa)
-        self.setIngrediente(self.anadirIngredientes())
+        self.setIngrediente(ingredientes)
 
 if __name__ == '__main__':
     print(type(CuatroQuesosPizzaBuilder()))
