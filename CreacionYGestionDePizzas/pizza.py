@@ -46,5 +46,14 @@ class Pizza:
     def ingredientes(self, ingredientes):
         self._ingredientes = ingredientes
     
-    def __str__(self):
-        return f"nombre: {self.nombre} \nmasa: {self.masa}\nsalsa: {self.salsa}\ningredientes: {self.ingredientes}"
+    def ingredientesToStr(self):
+        stringIngredientes=""
+        for ingrediente in self.ingredientes:
+            if(stringIngredientes == ""):
+                stringIngredientes+=ingrediente
+            else:
+                stringIngredientes += ", "+ingrediente
+        return stringIngredientes
+    
+    def to_csv(self):
+        return f"{self.nombre};{self.masa};{self.salsa};{self.ingredientesToStr()};"
