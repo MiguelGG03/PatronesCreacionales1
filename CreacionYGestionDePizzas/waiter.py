@@ -1,8 +1,9 @@
 import sys
 sys.path.append('../')
 from pizzaBuilder import *
+import validator
 from config import TAMANOS , SALSAS , INGREDIENTES
-from helpers import printIngredientes
+from helpers import *
 
 class Waiter:
     def __init__(self):
@@ -25,20 +26,25 @@ class Waiter:
 
 if __name__=='__main__':
     waiter = Waiter()
-    pregunta1 = input("Buenas!\n"
+    pregunta = input("Buenas!\n"
                       "Que pizza vasa desear tomar?\n"
                       "1. Cuatro Quesos\n"
                       "2. Barbacoa\n"
                       "3. Margarita\n"
                       "4. Personalizada\n"
                       ">>>")
-    if(pregunta1 == "1"):
+    if(pregunta == "1"):
         waiter.pizzaBuilder = CuatroQuesosPizzaBuilder()
+        print("Que tamaño deseas:")
+        printTamanos()
+        tamano = input(">>> ")
+        tamano = tamanoTranslator(tamano)
+        print("Que masa deseas:")
+        printMasas()
+        masa = input(">>> ")
 
-
-
-
-
-    elif(pregunta1 == "4"):
+    elif(pregunta == "4"):
+        waiter.pizzaBuilder = PersonalizadaPizzaBuilder()
+        printIngredientes()
         print("Seleccione un total de tres ingredientes numéricamente."
               "\nPresione enter si desea no añadir mas ingredientes")
