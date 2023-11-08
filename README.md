@@ -112,3 +112,16 @@ El programa cuenta con una interfaz gráfica y con una cliente máquina (termina
 
 Para ejecutar el programa, primero necesitaras instalar unos requirements en tu entorno virtual, para evitarlo he decidido crear un entorno virtual que solvente el problema y te permita ejecutar el programa desde este.
 
+### Como ejecuto el programa
+
+Primero necesitas activar tu entorno virtual, utiliza el siguiente comando en tu terminal:
+
+```
+    venv_pizza/Scripts/activate
+```
+
+para ejecutar el programa en modo interfaz gráfica deberás ejecutar el siguiente comando:
+
+```
+    python 
+```
