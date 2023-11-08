@@ -123,3 +123,6 @@ class PersonalizadaPizzaBuilder(PizzaBuilder):
         self.setSalsa(masa)
         self.setSalsa(salsa)
         self.setIngrediente([])
+
+if __name__ == '__main__':
+    print(type(CuatroQuesosPizzaBuilder()))

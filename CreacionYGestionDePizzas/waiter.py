@@ -4,10 +4,15 @@ from pizzaBuilder import *
 
 class Waiter:
     def __init__(self):
-        self.pizzaBuilder = None
+        self._pizzaBuilder = None
     
-    def setPizzaBuilder(self,pizzaBuilder:PizzaBuilder):
-        self.pizzaBuilder = pizzaBuilder
+    @property
+    def pizzaBuider(self):
+        return _pizzaBuilder
+
+    @pizzaBuilder.setter
+    def pizzaBuilder(self,pizzaBuilder):
+        if(pizzaBuilder)
     
     def getPizza(self):
         return self.pizzaBuilder.getPizza()
