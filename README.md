@@ -120,8 +120,14 @@ Primero necesitas activar tu entorno virtual, utiliza el siguiente comando en tu
     venv_pizza/Scripts/activate
 ```
 
-para ejecutar el programa en modo interfaz gráfica deberás ejecutar el siguiente comando:
+Para ejecutar el programa en modo interfaz gráfica deberás ejecutar el siguiente comando:
 
 ```
-    python 
+    python CreacionYGestionDePizzas/ui.py
+```
+
+Para ejecutar el programa e interactuar con el desde el terminal utilizaremos el comando:
+
+```
+    python CreacionYGestionDePizzas/main.py
 ```
