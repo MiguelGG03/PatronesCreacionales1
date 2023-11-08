@@ -5,6 +5,7 @@ class Pizza:
         self._masa = ""
         self._salsa = ""
         self._ingredientes = ""
+        self._precio = 0.0
 
     @property
     def nombre(self):
@@ -45,7 +46,15 @@ class Pizza:
     @ingredientes.setter
     def ingredientes(self, ingredientes):
         self._ingredientes = ingredientes
+
+    @property
+    def precio(self):
+        return self._precio
     
+    @precio.setter
+    def precio(self,precio):
+        self._precio = precio
+
     def ingredientesToStr(self):
         stringIngredientes=""
         for ingrediente in self.ingredientes:
