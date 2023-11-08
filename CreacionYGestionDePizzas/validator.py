@@ -20,7 +20,15 @@ class ValidarNombre(Validador):
                 if row[0] == nombre:
                     return True
             return False
-
+class ValidarNombrePersonalizado(Validador):
+    """
+    Validar el nombre de la pizza personalizada
+    """
+    def validar(self,nombre):
+        if(len(nombre)>=4 and len(nombre)<=16):
+            return True
+        return False
+    
 class ValidarIngredientes(Validador):
     """
     Valida que los ingredientes sean validos
