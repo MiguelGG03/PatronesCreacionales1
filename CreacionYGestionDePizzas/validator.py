@@ -8,16 +8,16 @@ class Validador(ABC):
     def validar(self,*args,**kwargs):
         pass
 
-class ValidarPizza(Validador):
+class ValidarNombre(Validador):
     """
-    Valida que la pizza seleccionada exista dentro de la carta
+    Valida que el nombre de la pizza seleccionada exista dentro de la carta
     """
 
-    def validar(self,pizza):
+    def validar(self,nombre):
         with open(CARTA_PATH, newline='') as File:  
             reader = csv.reader(File,delimiter=';')
             for row in reader:
-                if row[0] == pizza:
+                if row[0] == nombre:
                     return True
             return False
 
