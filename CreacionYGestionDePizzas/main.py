@@ -4,11 +4,12 @@ from CSVstorage import CSVstorage
 from waiter import Waiter
 from pizzaBuilder import *
 from helpers import *
-from config import 
+from config import PEDIDOS_PATH
 
 def main():
-    data = CSVstorage()
+    storage = CSVstorage(PEDIDOS_PATH)
     waiter = Waiter()
+    pizza = None
     pregunta = input("Buenas!\n"
                       "Que pizza vasa desear tomar?\n"
                       "1. Cuatro Quesos\n"
@@ -27,7 +28,7 @@ def main():
         masa = input(">>> ")
         masa = masaTranslator(masa)
         waiter.buildPizza(tamano,masa)
-        print(waiter.getPizza().to_csv())
+        pizza = waiter.getPizza()
 
     if(pregunta == "2"):
         waiter.pizzaBuilder = BarbacoaPizzaBuilder()
@@ -40,7 +41,7 @@ def main():
         masa = input(">>> ")
         masa = masaTranslator(masa)
         waiter.buildPizza(tamano,masa)
-        print(waiter.getPizza().to_csv())
+        pizza = waiter.getPizza()
 
     if(pregunta == "3"):
         waiter.pizzaBuilder = MargaritaPizzaBuilder()
@@ -53,7 +54,7 @@ def main():
         masa = input(">>> ")
         masa = masaTranslator(masa)
         waiter.buildPizza(tamano,masa)
-        print(waiter.getPizza().to_csv())
+        pizza = waiter.getPizza()
 
     elif(pregunta == "4"):
         waiter.pizzaBuilder = PersonalizadaPizzaBuilder()
@@ -84,10 +85,16 @@ def main():
                 ingrediente = ingredienteTranslator(ingrediente)
                 ingredientes.append(ingrediente)
         waiter.buildPizza(nombre,tamano,masa,salsa,ingredientes)
-        print(waiter.getPizza().to_csv())
+        pizza = waiter.getPizza()
     else:
         #print("No has seleccionado una opcion válida")
         pass
+    if(pizza == None):
+        pass
+    else:
+        storage.save(pizza.to_csv())
+
+
 
 if __name__ == '__main__':
     main()
