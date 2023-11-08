@@ -1,10 +1,13 @@
 import sys
 sys.path.append('../')
+from CSVstorage import CSVstorage
 from waiter import Waiter
 from pizzaBuilder import *
 from helpers import *
+from config import 
 
 def main():
+    data = CSVstorage()
     waiter = Waiter()
     pregunta = input("Buenas!\n"
                       "Que pizza vasa desear tomar?\n"
