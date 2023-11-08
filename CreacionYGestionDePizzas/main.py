@@ -8,6 +8,7 @@ from config import PEDIDOS_PATH
 
 def main():
     storage = CSVstorage(PEDIDOS_PATH)
+    print(storage.load())
     waiter = Waiter()
     pizza = None
     pregunta = input("Buenas!\n"

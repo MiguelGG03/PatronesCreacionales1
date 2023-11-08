@@ -12,6 +12,6 @@ class CSVstorage:
 
     def load(self):
         with open(self.file, "r") as file:
-            reader = csv.reader(file)
+            reader = csv.reader(file, delimiter=";")
             data = [row for row in reader]
         return data

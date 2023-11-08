@@ -4,10 +4,10 @@ CARTA_PATH = os.path.join(".", "CreacionYGestionDePizzas","data", "carta.csv")
 
 PEDIDOS_PATH = os.path.join(".","CreacionYGestionDePizzas","data","pedidos.csv")
 
-INGREDIENTES = ["tomate","queso","queso de cabra","champiñones",
+INGREDIENTES = ["tomate","queso","queso de cabra","champinones",
                 "bacon","pollo","pimiento",
-                "cebolla","piña","jamón",
-                "aceitunas","atún","mozzarella",
+                "cebolla","pina","jamon",
+                "aceitunas","atun","mozzarella",
                 "gorgonzola","parmesano","provolone",
                 "mozzarella","carne","albahaca"]
 
