@@ -77,7 +77,7 @@ class MargaritaPizzaBuilder(PizzaBuilder):
         self.setTamano(tamano)
         self.setMasa(masa)
         self.setSalsa("tomate")
-        self.setIngrediente(["mozzarella, tomate, albahaca"])
+        self.setIngrediente(["mozzarella", "tomate", "albahaca"])
 
 class BarbacoaPizzaBuilder(PizzaBuilder):
     def __init__(self):
@@ -90,6 +90,7 @@ class BarbacoaPizzaBuilder(PizzaBuilder):
             raise ValueError(f'El nombre "{nombre}" no es válido.')
 
     def build(self,tamano,masa):
+        self.setNombre("Barbacoa")
         self.setTamano(tamano)
         self.setMasa(masa)
         self.setSalsa("barbacoa")

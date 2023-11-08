@@ -103,4 +103,5 @@ if __name__=='__main__':
         waiter.buildPizza(nombre,tamano,masa,salsa,ingredientes)
         print(waiter.getPizza().to_csv())
     else:
-        print("No has seleccionado una opción válida")
+        #print("No has seleccionado una opcion válida")
+        pass
