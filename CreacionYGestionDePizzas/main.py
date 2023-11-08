@@ -85,3 +85,6 @@ def main():
     else:
         #print("No has seleccionado una opcion válida")
         pass
+
+if __name__ == '__main__':
+    main()
