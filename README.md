@@ -2,15 +2,27 @@
 
 El enlace para acceder al repositorio es el siguiente: [GitHub](https://github.com/MiguelGG03/PatronesCreacionales1.git)
 
-# Ejercicio 1: Análisis Modular de las Activaciones del SAMUR-Protección Civil en Madrid con Abstract Factory
+## `Accesos rápidos`
 
-## Contexto:
+- [Enunciado 1](#ejercicio-1)
+
+-  [Ejercicio 1 Resuelto](#ejercicio-1--resuelto)
+
+- [Enunciado 2](#ejercicio-2)
+
+- [Ejercicio 2 Visual](#ejercicio-2--visual)
+
+
+# Ejercicio 1
+## Análisis Modular de las Activaciones del SAMUR-Protección Civil en Madrid con Abstract Factory
+
+### Contexto:
 
 El SAMUR-Protección Civil es el servicio de atención a urgencias y emergencias sanitarias extrahospitalarias en el municipio de Madrid. Su labor es esencial para garantizar la seguridad y el bienestar de los ciudadanos en situaciones de emergencia. A lo largo del año, el SAMUR lleva a cabo múltiples "activaciones" en respuesta a diversas situaciones, desde accidentes de tráfico hasta emergencias médicas.
 
 La ciudad de Madrid, en su compromiso con la transparencia y la apertura de datos, publica un registro detallado de estas activaciones en formato CSV. Este registro incluye información como la fecha, hora, tipo de emergencia, y otros detalles relevantes de cada activación.
 
-## Objetivo:
+### Objetivo:
 
 Tu tarea es desarrollar un programa en Python que haga uso del patrón de diseño "Abstract Factory" para modularizar y estandarizar el análisis de estos datos. En específico:
 
@@ -43,18 +55,19 @@ Una fábrica que produzca visualizaciones gráficas (histogramas, gráficos de b
 Cada fábrica debe tener al menos dos productos concretos (e.g., histograma de activaciones por tipo de emergencia, gráfico de barras de activaciones por mes).
 
 4. `Análisis y Representación:` Utiliza las fábricas creadas para generar distintos análisis y representaciones de los datos. Muestra la media de activaciones por día, y un histograma de las activaciones
-## Recomendaciones:
+### Recomendaciones:
 
 - El objetivo principal es demostrar una correcta implementación y uso del patrón "Abstract Factory". Asegúrate de definir claramente las interfaces (productos abstractos) y las implementaciones concretas (productos concretos).
 - Utiliza pandas para la manipulación de datos y, si decides incluir visualizaciones, considera matplotlib o seaborn.
 
 > La puntuación máxima posible según esta rúbrica es de 30 puntos.
 
-# Ejercicio: Sistema Integral de Creación y Gestión de Pizzas Gourmet con Almacenamiento en CSV utilizando el Patrón Builder
+# Ejercicio 2
+## Sistema Integral de Creación y Gestión de Pizzas Gourmet con Almacenamiento en CSV utilizando el Patrón Builder
 
 La reconocida cadena de pizzerías gourmet "Delizioso" ha decidido lanzar una plataforma digital para permitir a sus clientes diseñar y personalizar sus pizzas al máximo detalle. Esta pizzería es conocida por su meticulosidad y su vasto menú de ingredientes, técnicas de cocción y presentaciones. Además de la personalización, "Delizioso" busca almacenar cada pizza diseñada por sus clientes en un archivo CSV para análisis posterior, recomendaciones personalizadas y marketing dirigido.
 
-## Características a considerar:
+### Características a considerar:
 
 - `Tipo de masa:` Variedades premium desde masas delgadas hasta masas fermentadas por 48 horas, con opciones de ingredientes especiales.
 - `Salsa base:` Desde salsas clásicas hasta salsas de autor, incluyendo opciones veganas y de edición limitada.
@@ -63,7 +76,7 @@ La reconocida cadena de pizzerías gourmet "Delizioso" ha decidido lanzar una pl
 - `Presentación:` Opciones que van desde estilos clásicos hasta presentaciones que son verdaderas obras de arte.
 - `Maridajes recomendados:` Una base de datos con cientos de opciones de vinos, cervezas y cocteles, con recomendaciones basadas en las elecciones de los ingredientes de la pizza.
 - `Extras y finalizaciones:` Desde bordes especiales hasta acabados con ingredientes gourmet como trufas y caviar.
-## Objetivos:
+### Objetivos:
 
 1. Diseñar un sistema que permita a los clientes construir su pizza paso a paso utilizando el patrón Builder.
 2. Asegurar que cada elección sea validada para ser compatible con las selecciones previas del cliente.
@@ -76,7 +89,7 @@ La reconocida cadena de pizzerías gourmet "Delizioso" ha decidido lanzar una pl
 
 Al final del ejercicio, el estudiante deberá justificar el uso del patrón Builder y explicar cómo se logra la robustez y adaptabilidad del sistema, destacando las ventajas de su diseño frente a otros posibles enfoques.
 
-## Distribución de puntos:
+### Distribución de puntos:
 
 - Implementación del patrón Builder: 15 puntos.
 - Validación y compatibilidad de elecciones: 10 puntos.
@@ -86,3 +99,16 @@ Al final del ejercicio, el estudiante deberá justificar el uso del patrón Buil
 - Interfaz de usuario: 5 puntos.
 - Seguridad y privacidad: 5 puntos.
 - Justificación del diseño y uso del patrón Builder: 10 puntos.
+
+# Ejercicio 1 : Resuelto
+
+# Ejercicio 2 : Visual
+
+Aquí adjunto pruebas de la correcta implementación de la interfaz gráfica de la pizzería al programa hecho con `PyQT-5`:
+
+![Pizzería_UI](images/Pizzería_IU.PNG)
+
+El programa cuenta con una interfaz gráfica y con una cliente máquina (terminal de visual).
+
+Para ejecutar el programa, primero necesitaras instalar unos requirements en tu entorno virtual, para evitarlo he decidido crear un entorno virtual que solvente el problema y te permita ejecutar el programa desde este.
+
