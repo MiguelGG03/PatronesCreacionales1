@@ -8,7 +8,7 @@ from config import PEDIDOS_PATH
 
 def main():
     storage = CSVstorage(PEDIDOS_PATH)
-    print(storage.load())
+    data = storage.load()
     waiter = Waiter()
     pizza = None
     pregunta = input("Buenas!\n"
@@ -93,7 +93,8 @@ def main():
     if(pizza == None):
         pass
     else:
-        storage.save(pizza.to_csv())
+        data.append(pizza.to_csv())
+        storage.save(data)
 
 
 
