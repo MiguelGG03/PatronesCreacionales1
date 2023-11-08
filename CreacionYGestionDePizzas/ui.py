@@ -44,6 +44,40 @@ class PizzaOrderApp(QMainWindow):
         central_widget.setLayout(layout)
         self.setCentralWidget(central_widget)
 
+        self.setStyleSheet("""
+    QMainWindow {
+        background-image: url('images/interior.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: scroll;
+        background-size: cover;
+    }
+    QPushButton {
+        font: bold;
+        background-color: #DAA520;  /* Dorado */
+        border-radius: 10px;
+        padding: 10px;
+    }
+    QPushButton:hover {
+        background-color: #F0E68C;  /* Khaki claro para efecto hover */
+    }
+    QLabel, QComboBox, QLineEdit {
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        font-size: 16px;
+    }
+    QComboBox {
+        background-color: #FFF8DC;  /* Un color crema que combina bien con el amarillo */
+        color: #8B4513;  /* Marrón oscuro para el texto */
+        border-radius: 5px;
+        padding: 5px;
+        border: 1px solid #DAA520;
+    }
+    QLineEdit {
+        background-color: white;
+        border: 1px solid #DAA520;  /* Borde dorado */
+    }
+    """)
+
     def create_personalized_options(self, layout):
         self.personalized_layout = QFormLayout()
         self.pizza_name_input = QLineEdit()
