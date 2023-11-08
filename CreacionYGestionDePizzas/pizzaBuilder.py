@@ -108,7 +108,7 @@ class PersonalizadaPizzaBuilder(PizzaBuilder):
     
     def checkMaxIngredientes(self,lista):
         """Por ahora hay un máximo de 3 ingredientes"""
-        if(len(lista)<=3):
+        if(len(lista)<3):
             return True
         else:
             print("ya son 3 ingredientes")
