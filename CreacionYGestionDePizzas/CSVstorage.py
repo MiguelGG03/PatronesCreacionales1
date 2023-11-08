@@ -7,7 +7,7 @@ class CSVstorage:
 
     def save(self, data):
         with open(self.file, "w", newline="") as file:
-            writer = csv.writer(file)
+            writer = csv.writer(file,delimiter=";")
             writer.writerows(data)
 
     def load(self):
