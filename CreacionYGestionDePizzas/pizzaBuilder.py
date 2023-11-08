@@ -8,6 +8,12 @@ class PizzaBuilder(ABC):
     def __init__(self):
         self.pizza = Pizza()
 
+    def setNombre(self,nombre):
+        if(ValidarNombre().validar(nombre)):
+            self.pizza.nombre = nombre
+        else:
+            raise ValueError(f'El tamaño "{nombre}" no es valido')
+
     def setTamano(self, tamano):
         if (ValidarTamano().validar(tamano.lower())):
             self.pizza.tamano = tamano
@@ -33,7 +39,7 @@ class PizzaBuilder(ABC):
             raise ValueError(f'Alguno de los ingredientes en {ingredientes} no es/son valido/s')
 
     @abstractmethod
-    def build(self):
+    def build(self,*args,**kwargs):
         pass
 
     def getPizza(self):
