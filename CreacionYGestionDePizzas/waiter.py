@@ -32,7 +32,7 @@ if __name__=='__main__':
                       "2. Barbacoa\n"
                       "3. Margarita\n"
                       "4. Personalizada\n"
-                      ">>>")
+                      ">>> ")
     if(pregunta == "1"):
         waiter.pizzaBuilder = CuatroQuesosPizzaBuilder()
         print("Que tamaño deseas:")

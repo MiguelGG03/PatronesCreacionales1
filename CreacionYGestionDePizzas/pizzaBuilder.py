@@ -117,7 +117,7 @@ class PersonalizadaPizzaBuilder(PizzaBuilder):
     def build(self,nombre,tamano,masa,salsa,ingredientes):
         self.setNombre(nombre)
         self.setTamano(tamano)
-        self.setSalsa(masa)
+        self.setMasa(masa)
         self.setSalsa(salsa)
         self.setIngrediente(ingredientes)
 
