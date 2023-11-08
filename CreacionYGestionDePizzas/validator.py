@@ -68,3 +68,13 @@ class ValidarTamano(Validador):
             if _tamaño == tamaño:
                 return True
         return False
+
+class ValidarPrecio(Validador):
+    """
+    Valida que el precio sea mayor (o igual en caso de descuento) que cero
+    """
+    def validar(self,precio):
+        if(precio>=0.0):
+            return True
+        else:
+            return False
