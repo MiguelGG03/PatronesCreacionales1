@@ -56,4 +56,4 @@ class Pizza:
         return stringIngredientes
     
     def to_csv(self):
-        return f"{self.nombre};{self.masa};{self.salsa};{self.ingredientesToStr()};"
+        return f"{self.nombre};{self.masa};{self.salsa};{self.ingredientesToStr()}; !!Falta añadirle el precio!!"
