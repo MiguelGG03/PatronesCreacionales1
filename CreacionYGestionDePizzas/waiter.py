@@ -43,7 +43,7 @@ if __name__=='__main__':
         printMasas()
         masa = input(">>> ")
         masa = masaTranslator(masa)
-        waiter.buildPizza(masa,tamano)
+        waiter.buildPizza(tamano,masa)
         print(waiter.getPizza().to_csv())
 
     if(pregunta == "2"):
@@ -56,7 +56,7 @@ if __name__=='__main__':
         printMasas()
         masa = input(">>> ")
         masa = masaTranslator(masa)
-        waiter.buildPizza(masa,tamano)
+        waiter.buildPizza(tamano,masa)
         print(waiter.getPizza().to_csv())
 
     if(pregunta == "3"):
@@ -69,7 +69,7 @@ if __name__=='__main__':
         printMasas()
         masa = input(">>> ")
         masa = masaTranslator(masa)
-        waiter.buildPizza(masa,tamano)
+        waiter.buildPizza(tamano,masa)
         print(waiter.getPizza().to_csv())
 
     elif(pregunta == "4"):
