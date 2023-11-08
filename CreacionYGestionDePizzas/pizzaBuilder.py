@@ -3,6 +3,7 @@ import sys
 sys.path.append('../')
 from pizza import Pizza
 from validator import *
+from config import INGREDIENTES
 
 class PizzaBuilder(ABC):
     def __init__(self):
@@ -112,17 +113,27 @@ class PersonalizadaPizzaBuilder(PizzaBuilder):
             print("No puedes añadir mas de tres ingredientes")
             return False
 
-    def añadirIngredientes(self):
+    def anadirIngredientes(self):
         ingredientes= []
-        print
+        while(self.checkMaxIngredientes(ingredientes)):
+            seleccion = int(input(">>> "))
+            if (seleccion not in range(INGREDIENTES)):
+                print("Ingrediente no encontrado")
+            elif (seleccion == ""):
+                break
+            else:
+                seleccion -= 1
+                ingredientes.append(INGREDIENTES[seleccion])
+                print(f"{INGREDIENTES[seleccion]} agregado con exito")
+
         return ingredientes
 
-    def build(self,nombre,tamano,masa,salsa,ingredientes):
+    def build(self,nombre,tamano,masa,salsa):
         self.setNombre(nombre)
         self.setTamano(tamano)
         self.setSalsa(masa)
         self.setSalsa(salsa)
-        self.setIngrediente([])
+        self.setIngrediente(self.anadirIngredientes())
 
 if __name__ == '__main__':
     print(type(CuatroQuesosPizzaBuilder()))
