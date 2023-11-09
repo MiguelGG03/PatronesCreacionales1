@@ -37,7 +37,15 @@ reutilizador en cumplir con la normativa correspondiente, eximiendo de responsab
 por el uso de la información reutilizada.
 
 Los datos se hacen referencia a las Activaciones del SAMUR-Protección Civil en el año 2023.
-La ruta del archivo : data/activaciones_samur_2023.csv
+La ruta del archivo : AnalisisModular/data/activaciones_samur_2023.csv
 """
 import pandas as pd
 import matplotlib.pyplot as plt
+
+def mainSAMUR():
+    RUTA = "AnalisisModular/data/activaciones_samur_2023.csv"
+    df = pd.read_csv(RUTA, sep = ";")
+    print(df.head(5))
+
+if __name__ == '__main__':
+    mainSAMUR()
