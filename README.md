@@ -8,9 +8,13 @@ El enlace para acceder al repositorio es el siguiente: [GitHub](https://github.c
 
 -  [Ejercicio 1 Resuelto](#ejercicio-1--resuelto)
 
+    - [Cómo ejecutar](#como-ejecuto-el-programa-del-ejercicio-1)
+
 - [Enunciado 2](#ejercicio-2)
 
 - [Ejercicio 2 Visual](#ejercicio-2--visual)
+
+    - [Cómo ejecutar](#como-ejecuto-el-programa-del-ejercicio-2)
 
 
 # Ejercicio 1
@@ -144,7 +148,7 @@ por el uso de la información reutilizada.
 Los datos se hacen referencia a las Activaciones del SAMUR-Protección Civil en el año 2023.
 La ruta del archivo : AnalisisModular/data/activaciones_samur_2023.csv
 
-### Como ejecuto el programa
+### Como ejecuto el programa del ejercicio 1
 
 Para ejecutar el programa e interactuar con él desde el terminal utilizaremos el comando:
 
@@ -162,7 +166,7 @@ El programa cuenta con una interfaz gráfica y con una cliente máquina (termina
 
 Para ejecutar el programa, primero necesitaras instalar unos requirements en tu entorno virtual, para evitarlo he decidido crear un entorno virtual que solvente el problema y te permita ejecutar el programa desde este.
 
-### Como ejecuto el programa
+### Como ejecuto el programa del ejercicio 2
 
 Primero necesitas activar tu entorno virtual, utiliza el siguiente comando en tu terminal:
 
