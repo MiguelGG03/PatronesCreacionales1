@@ -44,9 +44,9 @@ import matplotlib.pyplot as plt
 import sys
 sys.path.append("../")
 from helpers import *
+from config import RUTA
 
 def mainSAMUR():
-    RUTA = "AnalisisModular/data/activaciones_samur_2023.csv"
     df = pd.read_csv(RUTA, sep = ";")
     print(df.info())
     df["MesToNumber"] = df["Mes"].apply(mesToNumber)
