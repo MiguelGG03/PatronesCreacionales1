@@ -52,15 +52,11 @@ def plotNulls(dataframe):
 
 def mainSAMUR():
     df = pd.read_csv(RUTA, sep = ";")
-    print(df.info())
     df["MesToNumber"] = df["Mes"].apply(mesToNumber)
     modaMeses = getMode(df,"MesToNumber")
     print("El mes con más intervenciones es {}".format(numberToMes(modaMeses)))
-    numerico = horaToNumber("0:01:36")
-    desnumerico = numberToHora(numerico)
-    print("\nPasamos a numérico la hora 0:01:36 --> {}".format(numerico))
-    print("Hacemos la desconversion de {} --> {}".format(numerico,desnumerico))
-    plotNulls(df)
+    #plotNulls(df)
+    print('Tenemos un total de {} hspitales desconocidos.\nCambiamos sus valores por "Desconocido"'.format(df["Hospital"].isnull().sum()))
     
 
 if __name__ == '__main__':
