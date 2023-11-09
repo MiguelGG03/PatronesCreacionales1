@@ -68,12 +68,17 @@ def mainSAMUR():
     columns_to_check = ["Hora Solicitud", "Hora Intervencion"]
     limpiarNulos(df, columns_to_check)
     noNullLEN = df.shape
+    columns_to_check = ["Código","Distrito"]
+    limpiarNulos(df, columns_to_check)
     df.fillna("Desconocido", inplace = True)
     print("Vamos a comprobar que no hay nulos")
     comprobarNulos(df)
     #plotNulos(df)
+    print()
     print("Los datos sin limpiar : {}".format(originalLEN))
     print("Los datos limpios : {}".format(noNullLEN))
+
+
 
 
 if __name__ == '__main__':
