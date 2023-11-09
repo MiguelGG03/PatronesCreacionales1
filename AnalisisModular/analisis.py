@@ -46,6 +46,10 @@ sys.path.append("../")
 from helpers import *
 from config import RUTA
 
+def plotNulls(dataframe):
+    dataframe.isnull().sum().plot(kind = "bar")
+    plt.show();
+
 def mainSAMUR():
     df = pd.read_csv(RUTA, sep = ";")
     print(df.info())
@@ -56,6 +60,8 @@ def mainSAMUR():
     desnumerico = numberToHora(numerico)
     print("\nPasamos a numérico la hora 0:01:36 --> {}".format(numerico))
     print("Hacemos la desconversion de {} --> {}".format(numerico,desnumerico))
+    plotNulls(df)
+    
 
 if __name__ == '__main__':
     mainSAMUR()
