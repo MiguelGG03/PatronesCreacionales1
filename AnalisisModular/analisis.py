@@ -57,6 +57,11 @@ def mainSAMUR():
     print("El mes con más intervenciones es {}".format(numberToMes(modaMeses)))
     #plotNulls(df)
     print('Tenemos un total de {} hspitales desconocidos.\nCambiamos sus valores por "Desconocido"'.format(df["Hospital"].isnull().sum()))
+    df["Hospital"].fillna("Desconocido", inplace = True)
+    print('Vamos a comprobar que otras columnas tienen nulos:\n')
+    for columns in df.columns:
+        if (df[column].isnull().sum() > 0):
+            print('{} : {} nulos'.format(column,df[column].isnull().sum()))
     
 
 if __name__ == '__main__':
