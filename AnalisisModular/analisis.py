@@ -43,12 +43,13 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import sys
 sys.path.append("../")
-from helpers import *
+from AnalisisModular.helpers import *
 
 def mainSAMUR():
     RUTA = "AnalisisModular/data/activaciones_samur_2023.csv"
     df = pd.read_csv(RUTA, sep = ";")
-    print(df.head(5))
+    print(df.info())
+    print(df.Mes.value_counts())
 
 if __name__ == '__main__':
     mainSAMUR()
