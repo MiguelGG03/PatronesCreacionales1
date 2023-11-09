@@ -1,5 +1,8 @@
 RUTA = "AnalisisModular/data/activaciones_samur_2023.csv"
 
+RUTA_CLEAN = "AnalisisModular/data/activaciones_samur_2023_clean.csv"
+
+
 MESES_TO_NUMBERS={
         'ENERO': 1,
         'FEBRERO': 2,

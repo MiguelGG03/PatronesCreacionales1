@@ -1,6 +1,9 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from abc import ABC, abstractmethod
+import sys
+sys.path.append("../")
+from config import RUTA_CLEAN
 
 # Definir las clases base de productos
 class Estadistico(ABC):
@@ -76,8 +79,9 @@ class FabricaVisualizaciones(FabricaVisualizacion):
 
 if __name__ == "__main__":
     # Carga de datos desde el archivo CSV
-    file_path = "AnalisisModular/data/activaciones_samur_2023_clean.csv"
-    data = pd.read_csv(file_path)
+    data = pd.read_csv(RUTA_CLEAN, sep=';')
+
+    data = data["MesToNumber"]
 
 
     fabrica_estadisticos = FabricaEstadisticos()
