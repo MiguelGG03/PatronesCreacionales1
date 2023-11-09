@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 from abc import ABC, abstractmethod
 
 # Definir las clases base de productos
@@ -28,14 +29,14 @@ class Moda(Estadistico):
 # Productos concretos para visualizaciones
 class Histograma(Grafico):
     def dibujar(self, data):
-        import matplotlib.pyplot as plt
+        
         plt.hist(data, bins=10)
         plt.title('Histograma')
         plt.show()
 
 class GraficoBarras(Grafico):
     def dibujar(self, data):
-        import matplotlib.pyplot as plt
+        
         data.plot(kind='bar')
         plt.title('Gráfico de Barras')
         plt.show()
