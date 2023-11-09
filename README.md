@@ -101,8 +101,11 @@ Al final del ejercicio, el estudiante deberá justificar el uso del patrón Buil
 - Justificación del diseño y uso del patrón Builder: 10 puntos.
 
 # Ejercicio 1 : Resuelto
+
 ## Derechos legales:
-    Los derechos legales de uso de estos datos se puede encontrar en el siguiente [enlace](https://datos.madrid.es/egob/catalogo/aviso-legal) : https://datos.madrid.es/egob/catalogo/aviso-legal
+
+Los derechos legales de uso de estos datos se puede encontrar en el siguiente [enlace](https://datos.madrid.es/egob/catalogo/aviso-legal) : https://datos.madrid.es/egob/catalogo/aviso-legal
+
 ## Condiciones a tener en cuenta:
 Estas son las condiciones de uso para la reutilización de documentos y datos del 
 Ayuntamiento de Madrid:
