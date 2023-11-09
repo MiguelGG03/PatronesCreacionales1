@@ -10,6 +10,9 @@ class AbstractFactory(ABC):
     variants, but the products of one variant are incompatible with products of
     another.
     """
+    def __init__(self):
+        self._dataframe = pd.read_csv("AnalisisModular/data/activaciones_samur_2023.csv")
+
     @abstractmethod
     def create_product_a(self) -> AbstractProductA:
         pass
@@ -19,7 +22,7 @@ class AbstractFactory(ABC):
         pass
 
 
-class ConcreteFactory1(AbstractFactory):
+class Analisis(AbstractFactory):
     """
     Concrete Factories produce a family of products that belong to a single
     variant. The factory guarantees that resulting products are compatible. Note
@@ -27,10 +30,10 @@ class ConcreteFactory1(AbstractFactory):
     product, while inside the method a concrete product is instantiated.
     """
 
-    def create_product_a(self) -> AbstractProductA:
+    def media(self) -> AbstractProductA:
         return ConcreteProductA1()
 
-    def create_product_b(self) -> AbstractProductB:
+    def moda(self) -> AbstractProductB:
         return ConcreteProductB1()
 
 
