@@ -49,6 +49,7 @@ from config import RUTA
 
 def mainSAMUR():
     df = pd.read_csv(RUTA, sep = ";")
+    originalLEN = df.shape
     df["MesToNumber"] = df["Mes"].apply(mesToNumber)
     modaMeses = getMode(df,"MesToNumber")
     print("El mes con más intervenciones es {}".format(numberToMes(modaMeses)))
@@ -63,11 +64,16 @@ def mainSAMUR():
           "como en la de intervención, porque no aportan nada\n"
           "y a lo sumo son 1107.\n"
           "El resto de valores se rellenaran con un 'Desconocido'.")
-    df.dropna(subset = ["Hora de Solicitud", "Hora de Intervención"], inplace = True)
+    
+    columns_to_check = ["Hora de Solicitud", "Hora de Intervención"]
+    limpiarNulos(df, columns_to_check)
+    noNullLEN = df.shape
     df.fillna("Desconocido", inplace = True)
     print("Vamos a comprobar que no hay nulos")
     comprobarNulos(df)
-    plotNulos(df)
+    #plotNulos(df)
+    print("Los datos sin limpiar : {}".format(originalLEN))
+    print("Los datos limpios : {}".format(noNullLEN))
 
 
 if __name__ == '__main__':

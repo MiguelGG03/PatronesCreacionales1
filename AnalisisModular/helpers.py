@@ -1,4 +1,5 @@
 import sys
+import matplotlib.pyplot as plt
 sys.path.append("../")
 from config import MESES_TO_NUMBERS , NUMBERS_TO_MESES
 
@@ -46,5 +47,14 @@ def plotNulos(dataframe):
 
 def comprobarNulos(dataframe):
     for column in dataframe.columns:
-        if (df[column].isnull().sum() > 0):
-            print('{} : {} nulos'.format(column,dataframe[column].isnull().sum()))    
+        if (dataframe[column].isnull().sum() > 0):
+            print('{} : {} nulos'.format(column,dataframe[column].isnull().sum()))   
+
+
+def limpiarNulos(dataframe, columns_to_check):
+
+    if all(item in dataframe.columns for item in columns_to_check):
+        dataframe.dropna(subset = columns_to_check, inplace = True)
+    else:
+        missing_cols = [col for col in columns_to_check if col not in dataframe.columns] 
+        print(f"Missing columns: {missing_cols}")
