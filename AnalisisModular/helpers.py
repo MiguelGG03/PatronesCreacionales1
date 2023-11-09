@@ -75,6 +75,6 @@ def traductorGraficoFactory(opcion):
     if opcion == '1':
         return 'histograma'
     elif opcion == '2':
-        return 'grafico de barras'
+        return 'grafico_barras'
     else:
         return None
