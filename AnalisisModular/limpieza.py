@@ -54,7 +54,8 @@ def limpieza():
     print()
     print("Guardo el csv y lo uso en el AbstractFactory")
     columns = df.columns.tolist()
-    print(columns)
+    not_desired_columns = ['Año', 'Mes', 'Hora Solicitud', 'Hora Intervencion', 'Código', 'Distrito', 'Hospital']
+    df.drop(not_desired_columns, inplace = True, axis = 1)
     df.to_csv("AnalisisModular/data/activaciones_samur_2023_clean.csv", sep = ";", index = False)
 
 
