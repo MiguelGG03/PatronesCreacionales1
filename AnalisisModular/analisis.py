@@ -65,7 +65,7 @@ def mainSAMUR():
           "y a lo sumo son 1107.\n"
           "El resto de valores se rellenaran con un 'Desconocido'.")
     
-    columns_to_check = ["Hora de Solicitud", "Hora de Intervención"]
+    columns_to_check = ["Hora Solicitud", "Hora Intervencion"]
     limpiarNulos(df, columns_to_check)
     noNullLEN = df.shape
     df.fillna("Desconocido", inplace = True)
