@@ -46,23 +46,29 @@ sys.path.append("../")
 from helpers import *
 from config import RUTA
 
-def plotNulls(dataframe):
-    dataframe.isnull().sum().plot(kind = "bar")
-    plt.show();
 
 def mainSAMUR():
     df = pd.read_csv(RUTA, sep = ";")
     df["MesToNumber"] = df["Mes"].apply(mesToNumber)
     modaMeses = getMode(df,"MesToNumber")
     print("El mes con más intervenciones es {}".format(numberToMes(modaMeses)))
-    #plotNulls(df)
+    #plotNulos(df)
     print('Tenemos un total de {} hspitales desconocidos.\nCambiamos sus valores por "Desconocido"'.format(df["Hospital"].isnull().sum()))
     df["Hospital"].fillna("Desconocido", inplace = True)
     print('Vamos a comprobar que otras columnas tienen nulos:\n')
-    for columns in df.columns:
-        if (df[column].isnull().sum() > 0):
-            print('{} : {} nulos'.format(column,df[column].isnull().sum()))
-    
+    comprobarNulos(df)
+    print("\nComo podemos ver sigue habiendo nulos")
+    print("Lo que nos interesa es dropear las filas\n"
+          "que tengan nulo tanto en la hora de solicitud\n"
+          "como en la de intervención, porque no aportan nada\n"
+          "y a lo sumo son 1107.\n"
+          "El resto de valores se rellenaran con un 'Desconocido'.")
+    df.dropna(subset = ["Hora de Solicitud", "Hora de Intervención"], inplace = True)
+    df.fillna("Desconocido", inplace = True)
+    print("Vamos a comprobar que no hay nulos")
+    comprobarNulos(df)
+    plotNulos(df)
+
 
 if __name__ == '__main__':
     mainSAMUR()

@@ -36,4 +36,15 @@ def numberToHora(tiempo):
     minutos = int((tiempo - horas) * 60)
     segundos = int((tiempo - horas - minutos / 60) * 3600)
     
-    return "{}:{}:{}".format(horas, minutos, segundos)    
+    return "{}:{}:{}".format(horas, minutos, segundos)
+
+
+def plotNulos(dataframe):
+    dataframe.isnull().sum().plot(kind = "bar")
+    plt.show();
+
+
+def comprobarNulos(dataframe):
+    for column in dataframe.columns:
+        if (df[column].isnull().sum() > 0):
+            print('{} : {} nulos'.format(column,dataframe[column].isnull().sum()))    
