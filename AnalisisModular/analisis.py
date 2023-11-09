@@ -89,7 +89,8 @@ def mainSAMUR():
     print()
     df["HoraSolicitudToNumber"] = df["Hora Solicitud"].apply(horaToNumber) 
     print('En media se opera a las {}, que esto equivale a las {}'.format(df["HoraSolicitudToNumber"].mean(),numberToHora(df["HoraSolicitudToNumber"].mean())))
-
+    print()
+    print("Guardo el csv y lo uso en el abstAbstractFactory")
 
 
 
