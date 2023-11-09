@@ -9,11 +9,25 @@ def main():
     dataframe = pd.read_csv(RUTA_CLEAN, sep = ";")
     fabrica_estadisticos = FabricaEstadisticos()
     fabrica_visualizaciones = FabricaVisualizaciones()
+    print("Bienvenido al programa de analisis modular")
+    print()
+    print("Que columna del dataset deseas analizar?")
+    contador = 1
+    # seleccionar columnas numéricas
+
+
+    for column in dataframe.columns:
+        print( str(contador) + ". "+column)
+        contador += 1
+    print()
+    opcion = (input(">>> "))
+    columna = dataframe.columns[int(opcion)-1]
+    print("Has elegido la columna {}".format(opcion))
+    print()
     print("Vamos a ver que fabrica de estadisticos quieres usar")
     print("1. Media")
     print("2. Mediana")
     print("3. Moda")
-    print("4. Salir")
     print()
     opcion = (input(">>> "))
     opcion = traductorEstadisticaFactory(opcion)
@@ -22,7 +36,7 @@ def main():
         exit()
     else:
         estadistico = fabrica_estadisticos.crear_estadistico(opcion)
-        resultado = estadistico.calcular(dataframe)
+        resultado = estadistico.calcular(columna)
         print("El resultado es {}".format(resultado))
         print()
         print("Vamos a ver que fabrica de graficos quieres usar")
@@ -38,3 +52,6 @@ def main():
         else:
             grafico = fabrica_visualizaciones.crear_grafico(opcion)
             grafico.dibujar(dataframe)
+
+if __name__ == '__main__':
+    main()

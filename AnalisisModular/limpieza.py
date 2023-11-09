@@ -49,7 +49,12 @@ def limpieza():
     df["HoraSolicitudToNumber"] = df["Hora Solicitud"].apply(horaToNumber) 
     print('En media se opera a las {}, que esto equivale a las {}'.format(df["HoraSolicitudToNumber"].mean(),numberToHora(df["HoraSolicitudToNumber"].mean())))
     print()
+    df["HoraIntervencionToNumber"] = df["Hora Intervencion"].apply(horaToNumber) 
+    print('En media se opera a las {}, que esto equivale a las {}'.format(df["HoraIntervencionToNumber"].mean(),numberToHora(df["HoraIntervencionToNumber"].mean())))
+    print()
     print("Guardo el csv y lo uso en el AbstractFactory")
+    columns = df.columns.tolist()
+    print(columns)
     df.to_csv("AnalisisModular/data/activaciones_samur_2023_clean.csv", sep = ";", index = False)
 
 
