@@ -52,6 +52,10 @@ def mainSAMUR():
     df["MesToNumber"] = df["Mes"].apply(mesToNumber)
     modaMeses = getMode(df,"MesToNumber")
     print("El mes con más intervenciones es {}".format(numberToMes(modaMeses)))
+    numerico = horaToNumber("0:01:36")
+    desnumerico = numberToHora(numerico)
+    print("\nPasamos a numérico la hora 0:01:36 --> {}".format(numerico))
+    print("Hacemos la desconversion de {} --> {}".format(numerico,desnumerico))
 
 if __name__ == '__main__':
     mainSAMUR()
