@@ -80,6 +80,9 @@ def mainSAMUR():
     df["MesToNumber"] = df["Mes"].apply(mesToNumber)
     modaMeses = getMode(df,"MesToNumber")
     print("El mes con más intervenciones es {}".format(numberToMes(modaMeses)))
+    print("Originalmente era JULIO pero limpiar los datos lo ha cambiado")
+
+    print("En media se opera en el mes {} \nEsto equivale a {}".format(df["MesToNumber"].mean(),numberToMes(round(df["MesToNumber"].mean(),0))))
 
 
 
