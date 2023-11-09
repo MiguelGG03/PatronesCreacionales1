@@ -58,3 +58,23 @@ def limpiarNulos(dataframe, columns_to_check):
     else:
         missing_cols = [col for col in columns_to_check if col not in dataframe.columns] 
         print(f"Missing columns: {missing_cols}")
+
+
+def traductorEstadisticaFactory(opcion):
+    if opcion == '1':
+        return 'media'
+    elif opcion == '2':
+        return 'mediana'
+    elif opcion == '3':
+        return 'moda'
+    else:
+        return None
+    
+
+def traductorGraficoFactory(opcion):
+    if opcion == '1':
+        return 'histograma'
+    elif opcion == '2':
+        return 'grafico de barras'
+    else:
+        return None

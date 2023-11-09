@@ -6,7 +6,7 @@ from helpers import *
 from config import RUTA
 
 
-def mainSAMUR():
+def limpieza():
     df = pd.read_csv(RUTA, sep = ";")
     originalLEN = df.shape
     #plotNulos(df)
@@ -56,4 +56,4 @@ def mainSAMUR():
 
 
 if __name__ == '__main__':
-    mainSAMUR()
+    limpieza()
