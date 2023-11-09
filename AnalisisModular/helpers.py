@@ -18,6 +18,11 @@ def numberToMes(number):
         return None
 
 
+def getMode(dataframe,column):
+    value_counts = dataframe[column].value_counts()
+    value = value_counts.idxmax()
+    return value
+
 
 def horaToNumber(tiempo):
     horas, minutos, segundos = map(int, tiempo.split(':'))

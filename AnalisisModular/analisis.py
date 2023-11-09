@@ -50,9 +50,8 @@ def mainSAMUR():
     df = pd.read_csv(RUTA, sep = ";")
     print(df.info())
     df["MesToNumber"] = df["Mes"].apply(mesToNumber)
-    value_counts = df['MesToNumber'].value_counts()
-    value = value_counts.idxmax()
-    print("El mes con más intervenciones es {}".format(numberToMes(value)))
+    modaMeses = getMode(df,"MesToNumber")
+    print("El mes con más intervenciones es {}".format(numberToMes(modaMeses)))
 
 if __name__ == '__main__':
     mainSAMUR()
