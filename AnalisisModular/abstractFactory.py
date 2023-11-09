@@ -87,3 +87,4 @@ if __name__ == "__main__":
     fabrica_visualizaciones = FabricaVisualizaciones()
     grafico_barras = fabrica_visualizaciones.crear_grafico('grafico_barras')
     grafico_barras.dibujar(data)
+
