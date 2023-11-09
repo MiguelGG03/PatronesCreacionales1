@@ -3,7 +3,7 @@ import sys
 sys.path.append("../")
 from config import RUTA_CLEAN
 from abstractFactory import *
-from helpers import traductorEstadisticaFactory, traductorGraficoFactory
+from helpers import traductorEstadisticaFactory, traductorGraficoFactory, numberToHora, numberToMes
 
 def main():
     dataframe = pd.read_csv(RUTA_CLEAN, sep = ";")
@@ -38,7 +38,11 @@ def main():
         exit()
     else:
         estadistico = fabrica_estadisticos.crear_estadistico(opcion)
-        resultado = estadistico.calcular(columna)
+        resultado = estadistico.calcular(data)
+        if columna == "HoraSolicitudToNumber" or columna == "HoraIntervencionToNumber":
+            resultado = numberToHora(resultado)
+        else:
+            resultado = numberToMes(round(resultado,0))
         print("El resultado es {}".format(resultado))
         print()
         print("Vamos a ver que fabrica de graficos quieres usar")
@@ -53,7 +57,7 @@ def main():
             exit()
         else:
             grafico = fabrica_visualizaciones.crear_grafico(opcion)
-            grafico.dibujar(dataframe)
+            grafico.dibujar(data)
 
 if __name__ == '__main__':
     main()
