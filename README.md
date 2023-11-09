@@ -144,6 +144,14 @@ por el uso de la información reutilizada.
 Los datos se hacen referencia a las Activaciones del SAMUR-Protección Civil en el año 2023.
 La ruta del archivo : AnalisisModular/data/activaciones_samur_2023.csv
 
+### Como ejecuto el programa
+
+Para ejecutar el programa e interactuar con él desde el terminal utilizaremos el comando:
+
+```
+    python AnalisisModular/run.py
+```
+
 # Ejercicio 2 : Visual
 
 Aquí adjunto pruebas de la correcta implementación de la interfaz gráfica de la pizzería al programa hecho con `PyQT-5`:
