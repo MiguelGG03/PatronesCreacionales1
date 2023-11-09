@@ -50,9 +50,6 @@ from config import RUTA
 def mainSAMUR():
     df = pd.read_csv(RUTA, sep = ";")
     originalLEN = df.shape
-    df["MesToNumber"] = df["Mes"].apply(mesToNumber)
-    modaMeses = getMode(df,"MesToNumber")
-    print("El mes con más intervenciones es {}".format(numberToMes(modaMeses)))
     #plotNulos(df)
     print('Tenemos un total de {} hspitales desconocidos.\nCambiamos sus valores por "Desconocido"'.format(df["Hospital"].isnull().sum()))
     df["Hospital"].fillna("Desconocido", inplace = True)
@@ -77,8 +74,13 @@ def mainSAMUR():
     print()
     print("Los datos sin limpiar : {}".format(originalLEN))
     print("Los datos limpios : {}".format(noNullLEN))
+    print("Hemos eliminado {} filas".format(originalLEN[0] - noNullLEN[0]))
+    print("\nVamos a trabajar con estos datos ya limpiados")
+    print()
+    df["MesToNumber"] = df["Mes"].apply(mesToNumber)
+    modaMeses = getMode(df,"MesToNumber")
+    print("El mes con más intervenciones es {}".format(numberToMes(modaMeses)))
 
-    
 
 
 
