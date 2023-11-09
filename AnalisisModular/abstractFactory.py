@@ -76,8 +76,7 @@ class FabricaVisualizaciones(FabricaVisualizacion):
         else:
             raise ValueError(f'Tipo de gráfico no válido: {tipo}')
 
-
-if __name__ == "__main__":
+def main():
     # Carga de datos desde el archivo CSV
     data = pd.read_csv(RUTA_CLEAN, sep=';')
 
@@ -93,3 +92,7 @@ if __name__ == "__main__":
     grafico_barras = fabrica_visualizaciones.crear_grafico('grafico_barras')
     grafico_barras.dibujar(data)
 
+
+
+if __name__ == "__main__":
+    main()
