@@ -29,3 +29,11 @@ def horaToNumber(tiempo):
     
     tiempo_en_horas = horas + minutos / 60 + segundos / 3600
     return tiempo_en_horas
+
+
+def numberToHora(tiempo):
+    horas = int(tiempo)
+    minutos = int((tiempo - horas) * 60)
+    segundos = int((tiempo - horas - minutos / 60) * 3600)
+    
+    return "{}:{}:{}".format(horas, minutos, segundos)    
