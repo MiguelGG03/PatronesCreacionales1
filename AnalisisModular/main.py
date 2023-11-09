@@ -22,6 +22,7 @@ def main():
     print()
     opcion = (input(">>> "))
     columna = dataframe[int(opcion)-1]
+    print(columna)
     columna = columna.apply(pd.to_numeric, errors='coerce')
     print("Has elegido la columna {}".format(opcion))
     print()
