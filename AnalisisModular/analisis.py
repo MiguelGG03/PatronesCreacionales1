@@ -41,6 +41,9 @@ La ruta del archivo : AnalisisModular/data/activaciones_samur_2023.csv
 """
 import pandas as pd
 import matplotlib.pyplot as plt
+import sys
+sys.path.append("../")
+from helpers import *
 
 def mainSAMUR():
     RUTA = "AnalisisModular/data/activaciones_samur_2023.csv"
