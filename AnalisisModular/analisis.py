@@ -78,6 +78,8 @@ def mainSAMUR():
     print("Los datos sin limpiar : {}".format(originalLEN))
     print("Los datos limpios : {}".format(noNullLEN))
 
+    
+
 
 
 
