@@ -37,5 +37,5 @@ reutilizador en cumplir con la normativa correspondiente, eximiendo de responsab
 por el uso de la información reutilizada.
 
 Los datos se hacen referencia a las Activaciones del SAMUR-Protección Civil en el año 2023.
-La ruta del archivo : data/___.csv
+La ruta del archivo : data/activaciones_samur_2023.csv
 """
