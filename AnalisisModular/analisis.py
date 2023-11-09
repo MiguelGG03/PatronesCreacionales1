@@ -81,8 +81,14 @@ def mainSAMUR():
     modaMeses = getMode(df,"MesToNumber")
     print("El mes con más intervenciones es {}".format(numberToMes(modaMeses)))
     print("Originalmente era JULIO pero limpiar los datos lo ha cambiado")
-
+    print()
     print("En media se opera en el mes {} \nEsto equivale a {}".format(df["MesToNumber"].mean(),numberToMes(round(df["MesToNumber"].mean(),0))))
+    print()
+    print('Ahora veamos a que hora se suele intervenir en media.')
+    print('Miramos la media y no la moda porque no vamos a contrar\n2 iguales.')
+    print()
+    df["HoraSolicitudToNumber"] = df["Hora Solicitud"].apply(horaToNumber) 
+    print('En media se opera a las {}, que esto equivale a las {}'.format(df["HoraSolicitudToNumber"].mean(),numberToHora(df["HoraSolicitudToNumber"].mean())))
 
 
 
