@@ -21,9 +21,9 @@ def main():
         contador += 1
     print()
     opcion = (input(">>> "))
-    columna = dataframe[int(opcion)-1]
-    print(columna)
-    columna = columna.apply(pd.to_numeric, errors='coerce')
+    columna = dataframe.columns[int(opcion)-1]
+    data = dataframe[columna]
+    data = data.apply(pd.to_numeric, errors='coerce')
     print("Has elegido la columna {}".format(opcion))
     print()
     print("Vamos a ver que fabrica de estadisticos quieres usar")
